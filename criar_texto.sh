@@ -4,7 +4,7 @@
 ##	  Criar arquivo
 ##
 ## Autor: Jeferson Silva de Souza
-## Versão: 1.0
+## Versão: 1.1
 ##
 #=======================================================#
 ## Esse programa irá criar um arquivo com as 10 melhores
@@ -34,8 +34,8 @@ read repetir
 
 # Primeiro será verificado se o valor digitado pelo usuário
 # é um número inteiro. Caso não seja, o programa será finalizado
-if ( echo $repetir | egrep '[^0-9]' &> /dev/null); then
-    echo "Por favor, digitar apenas números inteiros, sem caracteres especiais!"
+if ( echo $repetir | egrep '[^1-9]' &> /dev/null); then
+    echo "Somentes números inteiros são permitidos, com exceção de zero!"
 else
     for (( i=1; i!="$repetir"; i++ )); do # Irá fazer um loop até o valor digitado pelo usuário
         cat $TEXTO >> $ARQ
